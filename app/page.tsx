@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import { LINKS } from "@/lib/links";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -25,6 +26,25 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="max-w-5xl w-full text-center">
+
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            <div className="flex justify-center mb-6">
+              <Image
+                src="/profile.png"
+                alt="Sai Charan Gandi"
+                width={140}
+                height={140}
+                className="rounded-full border border-gray-700"
+              />
+            </div>
+            Sai Charan Gandi
+          </motion.h1>
           <motion.p
             variants={fadeUp}
             initial="hidden"
@@ -34,16 +54,6 @@ export default function Home() {
           >
             DATA ENGINEER • PYTHON • SQL • CLOUD
           </motion.p>
-
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
-          >
-            Sai Charan Gandi
-          </motion.h1>
 
           <motion.p
             variants={fadeUp}

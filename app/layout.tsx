@@ -12,14 +12,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  openGraph: {
+export const metadata = {
   title: "Sai Charan Gandi | Data Engineer",
   description:
     "Data Engineer specializing in scalable ETL pipelines, cloud data platforms, and analytics systems.",
-  images: ["/og.png"],
-},
-  
+
+  openGraph: {
+    title: "Sai Charan Gandi | Data Engineer",
+    description:
+      "Data Engineer specializing in scalable ETL pipelines, cloud data platforms, and analytics systems.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Sai Charan Portfolio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
