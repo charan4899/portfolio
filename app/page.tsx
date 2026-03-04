@@ -85,6 +85,14 @@ export default function Home() {
             >
               GitHub
             </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-xl border border-gray-700 hover:border-gray-400 transition"
+            >
+              Resume
+            </a>
           </motion.div>
         </div>
       </section>
