@@ -24,7 +24,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center px-6">
+      <section className="relative min-h-screen flex items-center justify-center px-6 pt-28 md:pt-32">
         <div className="max-w-5xl w-full text-center">
 
           <motion.h1
@@ -34,15 +34,39 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/profile.png"
-                alt="Sai Charan Gandi"
-                width={140}
-                height={140}
-                className="rounded-full border border-gray-700"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center mb-8"
+            >
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+                className="relative"
+              >
+                {/* glow */}
+                <div className="absolute inset-0 rounded-full blur-2xl bg-gradient-to-r from-indigo-500/40 via-cyan-500/30 to-emerald-500/30" />
+
+                {/* gradient ring */}
+                <div className="relative rounded-full p-[3px] bg-gradient-to-r from-indigo-500 via-cyan-500 to-emerald-500">
+                  {/* glass frame */}
+                  <div className="rounded-full bg-black/60 backdrop-blur-md p-[6px] border border-white/10">
+                    <Image
+                      src="/profile.png"
+                      alt="Sai Charan Gandi"
+                      width={160}
+                      height={160}
+                      priority
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* small highlight */}
+                <div className="pointer-events-none absolute -top-1 -left-2 h-10 w-10 rounded-full bg-white/10 blur-xl" />
+              </motion.div>
+            </motion.div>
             Sai Charan Gandi
           </motion.h1>
           <motion.p
@@ -52,7 +76,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-sm tracking-widest text-gray-400 mb-4"
           >
-            DATA ENGINEER • PYTHON • SQL • CLOUD
+            DATA ENGINEER • PYTHON • SQL • AZURE • AWS
           </motion.p>
 
           <motion.p
@@ -124,29 +148,69 @@ export default function Home() {
               and easy to scale. My work focuses on clean data modeling, SQL optimization,
               and building APIs that power dashboards and reporting systems.
             </p>
-
             <div className="mt-8 flex flex-wrap gap-3">
-              {[
-                "Python",
-                "SQL",
-                "SQLite / PostgreSQL",
-                "ETL Pipelines",
-                "Data Modeling",
-                "REST APIs",
-                "Cloud (AWS/Azure)",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1 rounded-full text-sm border border-gray-700 text-gray-200 bg-black/30"
-                >
-                  {skill}
-                </span>
-              ))}
+                  {[
+                    "Python",
+                    "SQL",
+                    "SQLite / PostgreSQL",
+                    "ETL Pipelines",
+                    "Data Modeling",
+                    "REST APIs",
+                    "Cloud (AWS/Azure)",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 rounded-full text-sm border border-gray-700 text-gray-200 bg-black/30"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
-        </div>
+
+            
       </section>
 
+      {/* EDUCATION */}
+      <section id="education" className="relative py-24 px-6 border-t border-gray-800/60">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            variants={fadeUp}
+            className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-10"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
+            <div className="mt-8 grid gap-4">
+                    <div className="rounded-2xl border border-gray-800 bg-black/30 p-5">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                          <p className="font-medium text-white">
+                            Master of Science in Computer Science
+                          </p>
+                          <p className="text-gray-400 text-sm">Aug 2021 – Dec 2022</p>
+                        </div>
+                        <p className="text-gray-400 mt-1">Kennesaw State University, GA, USA</p>
+                      </div>
+
+                      <div className="rounded-2xl border border-gray-800 bg-black/30 p-5">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                          <p className="font-medium text-white">
+                            Bachelor of Technology in Computer Science
+                          </p>
+                          <p className="text-gray-400 text-sm">Jul 2016 – Sep 2020</p>
+                        </div>
+                        <p className="text-gray-400 mt-1">Anil Neerukonda Institute of Technology and Sciences, AP, India</p>
+                      </div>
+                    </div>
+            </motion.div>
+        </div> 
+      </section>
+
+
+      
       {/* PROJECTS */}
       <section id="projects" className="relative py-24 px-6 border-t border-gray-800/60">
         <div className="max-w-5xl mx-auto">

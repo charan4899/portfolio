@@ -4,7 +4,7 @@ export default function Navbar() {
     <nav className="w-full fixed top-0 left-0 bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
         <h1 className="text-lg font-semibold tracking-wide">
-          Sai Charan Gandi
+          Sai Charan
         </h1>
 
         <div className="space-x-6 text-sm text-gray-400">
