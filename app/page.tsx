@@ -213,6 +213,7 @@ export default function Home() {
       
       {/* PROJECTS */}
       <section id="projects" className="relative py-24 px-6 border-t border-gray-800/60">
+      
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial="hidden"
@@ -236,6 +237,59 @@ export default function Home() {
             variants={fadeUp}
             className="grid gap-6"
           >
+            <div className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-8 hover:border-gray-600 transition">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">
+                    YouTube Trending Analytics Pipeline
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed max-w-2xl">
+                    Automated data pipeline that collects trending YouTube videos across
+                    multiple countries using the YouTube Data API, stores daily snapshots
+                    in PostgreSQL (Neon), and visualizes insights through a Streamlit
+                    analytics dashboard.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {[
+                      "Python",
+                      "YouTube API",
+                      "PostgreSQL",
+                      "Pandas",
+                      "Streamlit",
+                      "Plotly",
+                      "GitHub Actions",
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-xs border border-gray-700 text-gray-200 bg-black/30"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex gap-3 md:flex-col">
+                  <a
+                    href="/projects/youtube-trending-analytics"
+                    className="px-5 py-3 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition text-center"
+                  >
+                    Case Study
+                  </a>
+
+                  <a
+                    href={LINKS.youtubeTrendingLive}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-5 py-3 rounded-xl border border-gray-700 hover:border-gray-400 transition text-center"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
             <div className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-8 hover:border-gray-600 transition">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div>

@@ -8,4 +8,6 @@ export const LINKS = {
 
   // Coming soon for now (we'll replace after deployment)
   salesDashboardLive: "https://sales-analytics-dashboard-o4ud.onrender.com",
+  youtubeTrendingLive: "https://youtube-trending-analytics-sc.streamlit.app/",
+  youtubeTrendingRepo: "https://github.com/charan4899/youtube-trending-analytics",
 };
