@@ -338,9 +338,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="relative py-24 px-6 border-t border-gray-800/60">
+      {/* CONNECT */}
+      <section id="connect" className="relative py-24 px-6 border-t border-gray-800/60">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial="hidden"
@@ -350,11 +349,71 @@ export default function Home() {
             variants={fadeUp}
             className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Contact</h2>
-            <p className="text-gray-400 mb-6">
-              Want to collaborate or discuss data engineering opportunities?
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let&apos;s Connect</h2>
+
+            <p className="text-gray-400 max-w-2xl mx-auto mb-4">
+              The best conversations often start with a simple Hello! So feel free to drop one in my DMs!
             </p>
-            <p className="text-lg font-medium">charan4899@gmail.com</p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex flex-wrap items-center justify-center gap-4"
+            >
+              {/* LinkedIn */}
+              <a
+                href={LINKS.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-gray-700 bg-black/30 hover:border-blue-400 hover:bg-blue-500/10 transition duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 text-blue-400 group-hover:scale-110 transition"
+                >
+                  <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 17V10.9H6.3V17H8.34ZM7.32 10.06A1.18 1.18 0 1 0 7.32 7.7A1.18 1.18 0 0 0 7.32 10.06ZM17.7 17V13.56C17.7 11.72 16.72 10.76 15.42 10.76C14.37 10.76 13.89 11.34 13.63 11.74V10.9H11.59C11.62 11.46 11.59 17 11.59 17H13.63V13.6C13.63 13.42 13.64 13.24 13.7 13.11C13.83 12.75 14.13 12.38 14.63 12.38C15.28 12.38 15.54 12.88 15.54 13.61V17H17.7Z" />
+                </svg>
+                <span className="text-white font-medium">LinkedIn</span>
+              </a>
+
+              {/* Email */}
+              <a
+                href={LINKS.email}
+                className="group inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-gray-700 bg-black/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition"
+                >
+                  <path d="M3 5.25A2.25 2.25 0 0 1 5.25 3H18.75A2.25 2.25 0 0 1 21 5.25V18.75A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V5.25ZM5.56 6.75L12 11.34L18.44 6.75H5.56ZM19.5 8.16L12.44 13.2A.75.75 0 0 1 11.56 13.2L4.5 8.16V18.75C4.5 19.16 4.84 19.5 5.25 19.5H18.75C19.16 19.5 19.5 19.16 19.5 18.75V8.16Z" />
+                </svg>
+                <span className="text-white font-medium">Email</span>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href={LINKS.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-gray-700 bg-black/30 hover:border-pink-400 hover:bg-pink-500/10 transition duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 text-pink-400 group-hover:scale-110 transition"
+                >
+                  <path d="M7.5 2H16.5A5.5 5.5 0 0 1 22 7.5V16.5A5.5 5.5 0 0 1 16.5 22H7.5A5.5 5.5 0 0 1 2 16.5V7.5A5.5 5.5 0 0 1 7.5 2ZM7.68 3.8A3.88 3.88 0 0 0 3.8 7.68V16.32A3.88 3.88 0 0 0 7.68 20.2H16.32A3.88 3.88 0 0 0 20.2 16.32V7.68A3.88 3.88 0 0 0 16.32 3.8H7.68ZM17.25 5.5A1.25 1.25 0 1 1 17.25 8A1.25 1.25 0 0 1 17.25 5.5ZM12 7A5 5 0 1 1 7 12A5 5 0 0 1 12 7ZM12 8.8A3.2 3.2 0 1 0 15.2 12A3.2 3.2 0 0 0 12 8.8Z" />
+                </svg>
+                <span className="text-white font-medium">Instagram</span>
+              </a>
+            </motion.div>
           </motion.div>
 
           <p className="text-center text-gray-500 text-sm mt-8">
@@ -362,6 +421,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+      
     </main>
   );
 }

@@ -14,8 +14,8 @@ export default function Navbar() {
           <a href="#projects" className="hover:text-white transition">
             Projects
           </a>
-          <a href="#contact" className="hover:text-white transition">
-            Contact
+          <a href="#connect" className="hover:text-white transition">
+            Connect
           </a>
           <a href={LINKS.email} className="hover:text-white transition">Email</a>
         </div>

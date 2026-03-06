@@ -2,6 +2,7 @@ export const LINKS = {
   github: "https://github.com/charan4899",
   linkedin: "https://www.linkedin.com/in/charan-g-416370187/",
   email: "mailto:charan4899@gmail.com",
+  instagram: "https://www.instagram.com/charan_4899?igsh=MTM0d2tvdGdoZXUweg%3D%3D&utm_source=qr",
 
   // Sales Dashboard (we'll fill these after GitHub repo + deployment)
   salesDashboardRepo: "https://github.com/charan4899/sales-analytics-dashboaard",
