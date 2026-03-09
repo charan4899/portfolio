@@ -290,7 +290,7 @@ export default function Home() {
             variants={fadeUp}
             className="grid gap-6"
           >
-            {/* Highlighted project */}
+            {/* Featured project */}
             <div className="rounded-3xl border border-indigo-500/40 bg-white/5 backdrop-blur-md p-8 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-950/40 transition duration-300">
               <div className="flex items-center justify-between mb-4">
                 <span className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
@@ -298,6 +298,62 @@ export default function Home() {
                 </span>
               </div>
 
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">
+                    Agentic Travel Intelligence Platform
+                  </h3>
+
+                  <p className="text-gray-300 leading-relaxed max-w-2xl">
+                    A full-stack data analytics and AI platform that analyzes global travel
+                    destinations and provides budget insights and AI-powered recommendations
+                    through an interactive dashboard.
+                  </p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {[
+                      "Next.js",
+                      "FastAPI",
+                      "PostgreSQL",
+                      "Groq",
+                      "Llama-3",
+                      "Chart.js",
+                      "Docker",
+                      "Vercel",
+                      "Render",
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-xs border border-gray-700 text-gray-200 bg-black/30"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex gap-3 md:flex-col">
+                  <a
+                    href="/projects/agentic-travel-intelligence"
+                    className="px-5 py-3 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition text-center"
+                  >
+                    Case Study
+                  </a>
+
+                  <a
+                    href={LINKS.agenticTravelLive}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-5 py-3 rounded-xl border border-gray-700 hover:border-gray-400 transition text-center"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* YouTube project */}
+            <div className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-8 hover:border-gray-600 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 transition duration-300">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">
@@ -351,7 +407,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Sales analytics */}
+            {/* Sales project */}
             <div className="rounded-3xl border border-gray-800 bg-white/5 backdrop-blur-md p-8 hover:border-gray-600 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 transition duration-300">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div>

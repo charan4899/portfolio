@@ -11,4 +11,6 @@ export const LINKS = {
   salesDashboardLive: "https://sales-analytics-dashboard-o4ud.onrender.com",
   youtubeTrendingLive: "https://youtube-trending-analytics-sc.streamlit.app/",
   youtubeTrendingRepo: "https://github.com/charan4899/youtube-trending-analytics",
+  agenticTravelLive: "https://agentic-travel-eight.vercel.app",
+agenticTravelRepo: "https://github.com/charan4899/agentic-travel-intelligence",
 };
