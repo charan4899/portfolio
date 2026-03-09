@@ -53,23 +53,27 @@ export default function AgenticTravelIntelligencePage() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <a
-            href={LINKS.agenticTravelRepo}
+            href={LINKS.agenticTravelLive}
             target="_blank"
             rel="noreferrer"
             className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:bg-gray-200 transition text-center"
           >
-            View GitHub Repo
+            Open Live Demo
           </a>
 
           <a
-            href={LINKS.agenticTravelLive}
+            href={LINKS.agenticTravelRepo}
             target="_blank"
             rel="noreferrer"
             className="px-6 py-3 rounded-xl border border-gray-700 hover:border-gray-400 transition text-center"
           >
-            Open Live Demo
+            View GitHub Repo
           </a>
         </div>
+
+        <p className="text-sm text-gray-500 mt-4 max-w-2xl">
+        Note: This live demo uses free-tier hosting, so the backend may take about a minute to be back up and running.
+        </p>
 
         {/* Quick Summary */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">

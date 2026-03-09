@@ -204,11 +204,19 @@ export default function Home() {
               "SQL",
               "PostgreSQL",
               "Pandas",
+              "FastAPI",
               "Flask",
+              "Next.js",
+              "React",
+              "TailwindCSS",
               "Streamlit",
+              "Chart.js",
+              "Plotly",
+              "Groq / Llama-3",
+              "GitHub Actions",
+              "Docker",
               "AWS",
               "Azure",
-              "GitHub Actions",
             ].map((tech) => (
               <div
                 key={tech}
@@ -279,6 +287,9 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
             <p className="text-gray-400 mt-2">
               A selection of systems I’ve built end-to-end.
+            </p>
+            <p className="text-xs text-gray-500 mt-3 max-w-xs">
+              Note: Live demos use free-tier hosting, so the backend may take about a minute to be back up and running.
             </p>
           </motion.div>
 
