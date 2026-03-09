@@ -10,6 +10,26 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+const techStack = [
+  "Python",
+  "FastAPI",
+  "PostgreSQL",
+  "Next.js",
+  "React",
+  "TailwindCSS",
+  "SQL",
+  "Data Pipelines",
+  "REST APIs",
+  "Streamlit",
+  "Plotly",
+  "Groq LLM",
+  "Docker",
+  "GitHub Actions",
+  "Neon PostgreSQL",
+  "Vercel",
+  "Render",
+];
+
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
@@ -83,8 +103,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10"
           >
-            I build scalable ETL pipelines, cloud data platforms, and analytics
-            systems that transform raw data into business-ready insights.
+            I design data pipelines, analytics platforms, and AI-powered systems that turn raw data into buisness-ready products.
           </motion.p>
 
           <motion.div
@@ -128,6 +147,41 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* TECH STACK */}
+      <section className="relative border-t border-gray-800 py-10 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="marquee relative">
+
+            {/* left fade */}
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black to-transparent z-10" />
+
+            {/* right fade */}
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-black to-transparent z-10" />
+
+            <div className="marquee-track">
+              <div className="marquee-group">
+                {techStack.map((tech) => (
+                  <span key={`a-${tech}`} className="px-8 text-gray-300 whitespace-nowrap">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="marquee-group">
+                {techStack.map((tech) => (
+                  <span key={`b-${tech}`} className="px-8 text-gray-300 whitespace-nowrap">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </section>
+
 
       {/* ABOUT */}
       <section id="about" className="relative py-24 px-6 border-t border-gray-800/60">
@@ -188,9 +242,9 @@ export default function Home() {
       {/* TECH STACK */}
       <section className="relative py-16 px-6 border-t border-gray-800/60">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-xl font-semibold mb-10 text-gray-300">
-            Technologies I Work With
-          </h3>
+          <h2 className="text-center text-gray-400 text-sm tracking-widest mb-6">
+            TECHNOLOGIES I WORK WITH
+          </h2>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -302,16 +356,16 @@ export default function Home() {
             className="grid gap-6"
           >
             {/* Featured project */}
-            <div className="rounded-3xl border border-indigo-500/40 bg-white/5 backdrop-blur-md p-8 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-950/40 transition duration-300">
+            <div className="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 backdrop-blur-md p-8 hover:border-emerald-400 hover:scale-[1.02] transition duration-300">
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">
-                  Featured Project
+                <span className="inline-block text-xs tracking-widest text-emerald-400 mb-2">
+                  FEATURED PROJECT
                 </span>
               </div>
 
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-2">
                     Agentic Travel Intelligence Platform
                   </h3>
 
